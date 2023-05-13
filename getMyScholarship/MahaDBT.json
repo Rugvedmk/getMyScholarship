@@ -6,7 +6,7 @@
             "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
             "Category": [
                 {
-                    "Name": "General",
+                    "Name": ["General"],
                     "Income": [
                         {
                             "Amount": 800000,
@@ -55,7 +55,7 @@
                     ]
                 },
                 {
-                    "Name": "SC",
+                    "Name": ["SC"],
                     "Income": [
                         {
                             "Amount": 800000,
