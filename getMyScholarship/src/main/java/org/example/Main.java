@@ -6,6 +6,7 @@ import com.customPackage.mongoConnect;
 import static com.customPackage.searchQuery.printResult;
 //import customPackage;
 
+import static com.customPackage.insertQuery.insert;
 
 public class Main {
 
@@ -14,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
         //System.out.printf("Hello and welcome!");
-
+        insert(); //creates the database in the device, if already exist does not
         printResult();
 
     }
