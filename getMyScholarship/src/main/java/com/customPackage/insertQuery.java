@@ -16,7 +16,7 @@ public class insertQuery {
     static mongoConnect mongoDB  = new mongoConnect();
     public static void insert() {
         String connectionString = "mongodb://localhost:27017";
-        String databaseName = "Scholarships";
+        String databaseName = "scholarshipDB";
         String collectionName = "MahaDBT";
         //Getting the data in from json file to jsonObject
         JSONObject jsonObject = null;
