@@ -6,6 +6,9 @@ import com.customPackage.mongoConnect;
 import static com.customPackage.searchQuery.printResult;
 //import customPackage;
 
+import static com.customPackage.update.addDoc.updateScheme;
+
+
 import static com.customPackage.insertQuery.insert;
 
 public class Main {
@@ -17,7 +20,7 @@ public class Main {
         //System.out.printf("Hello and welcome!");
         insert(); //creates the database in the device, if already exist does not
         printResult();
-
+        updateScheme();
     }
 }
 
