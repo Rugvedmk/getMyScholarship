@@ -16,7 +16,7 @@ import java.util.List;
 
 public class searchQuery {
     //Establishing connection with mongoDB
-    static mongoConnect mongoDB = new mongoConnect();
+    //static mongoConnect mongoDB = new mongoConnect();
 
     //Function to get the query from the user
     public static String[] getQuery(){
@@ -32,6 +32,7 @@ public class searchQuery {
         System.out.print("Enter Number : ");
         int choice = sc.nextInt();
         System.out.println(" ");
+
         String selectedReligion = religion[choice-1];
 
         System.out.print("Select Category by pressing the number : ");
@@ -43,6 +44,7 @@ public class searchQuery {
         System.out.print("Enter Number : ");
         choice = sc.nextInt();
         System.out.println(" ");
+
         String selectedCategory = category[choice-1];
 
 
@@ -54,6 +56,7 @@ public class searchQuery {
         System.out.print("Enter Number : ");
         choice = sc.nextInt();
         System.out.println(" ");
+
         String selectedIncome = Integer.toString(income[choice-1]);
 
         String []choiceTemplate = {selectedReligion,selectedCategory,selectedIncome};
@@ -62,7 +65,7 @@ public class searchQuery {
     }
 
     //Function to search the query from the dataBase
-    public static AggregateIterable<Document> searchQuery(String []param) {
+    public static AggregateIterable<Document> searchQuery(String []param,mongoConnect mongoDB) {
         System.out.println("religion "+ param[0]);
         System.out.println("category "+ param[1]);// 250000
         int num = Integer.parseInt(param[2]);
@@ -72,6 +75,7 @@ public class searchQuery {
 //        for (Document result : iterable){
 //            System.out.println(result.toJson());
 //        }
+        //Document updatedoc = new Document().append("Department","my").append("Eligibility","yess");
 
 
         AggregateIterable<Document> aggregateIterable = mongoDB.MahaDBT.aggregate(
@@ -89,6 +93,7 @@ public class searchQuery {
                         Aggregates.match(
                                 Filters.in("Scholarships.Category.Income.Religion.Name", param[0])//param[0] "Hindu"
                         ),
+                        //Aggregates.u("$Scholarships.Category.Income.Religion.Scheme",updatedoc),
                         Aggregates.project(Projections.fields(
                                 Projections.include("Scholarships.Name",
                                         "Scholarships.ApplyLink",
@@ -109,12 +114,13 @@ public class searchQuery {
 
     }
 
-    public static void printResult()
+    public static void printResult(mongoConnect mogoDB)
     {
-        AggregateIterable<Document> aggregateIterable = searchQuery(getQuery());
+        AggregateIterable<Document> aggregateIterable = searchQuery(getQuery(),mogoDB);
         System.out.println("Search operation carride out");
         for (Document document : aggregateIterable) {
             String scholarshipName = document.get("Scholarships",Document.class).getString("Name");
+
             String applyLink = document.get("Scholarships",Document.class).getString("ApplyLink");
             String department = document.get("Scholarships",Document.class)
                     .get("Category", Document.class)
