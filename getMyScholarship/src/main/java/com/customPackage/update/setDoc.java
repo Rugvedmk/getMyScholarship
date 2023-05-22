@@ -73,15 +73,15 @@ public class setDoc {
 //                .append("ApplicationFees",ApplicationFees);
 
         Bson query = Filters.and(
-                Filters.eq("Scholarships.Name",scholarshipName)//"Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme"
+                Filters.eq("Name",scholarshipName)//"Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme"
         );
 
-        Bson update = Updates.set("Scholarships.$[schObj].Category.$[catObj].Income.$[incObj].Religion.$[relObj].Schemes.$[sheObj].Eligibility", EligibilityLink);
+        Bson update = Updates.set("Category.$[catObj].Income.$[incObj].Religion.$[relObj].Schemes.$[sheObj].Eligibility", EligibilityLink);
 
 
         UpdateOptions options = new UpdateOptions().arrayFilters(
                 List.of(
-                        Filters.eq("schObj.Name",scholarshipName),
+                        //Filters.eq("schObj.Name",scholarshipName),
                         Filters.gte("incObj.Amount",Amount),
                         Filters.in("relObj.Name",Religion),
                         Filters.in("catObj.Name",Category),

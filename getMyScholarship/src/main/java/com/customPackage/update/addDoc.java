@@ -91,15 +91,15 @@ public class addDoc {
                 .append("ApplicationFees",ApplicationFees);
 
         Bson query = Filters.and(
-                Filters.eq("Scholarships.Name",scholarshipName)//"Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme"
+                Filters.eq("Name",scholarshipName)//"Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme"
         );
 
-        Bson update = Updates.push("Scholarships.$[schObj].Category.$[catObj].Income.$[incObj].Religion.$[relObj].Schemes", addDoc);
+        Bson update = Updates.push("Category.$[catObj].Income.$[incObj].Religion.$[relObj].Schemes", addDoc);
 
 
         UpdateOptions options = new UpdateOptions().arrayFilters(
                 List.of(
-                        Filters.eq("schObj.Name",scholarshipName),
+                        //Filters.eq("schObj.Name",scholarshipName),
                         Filters.gte("incObj.Amount",Amount),
                         Filters.in("relObj.Name",Religion),
                         Filters.in("catObj.Name",Category)

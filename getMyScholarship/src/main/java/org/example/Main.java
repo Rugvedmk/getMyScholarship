@@ -40,7 +40,7 @@ public class Main {
             System.out.println("Enter 0 to exit");
             choice = sc.nextInt();
             System.out.println();
-            
+
             switch (choice){
                 case 1:
                     addScheme(1,mongoDB);

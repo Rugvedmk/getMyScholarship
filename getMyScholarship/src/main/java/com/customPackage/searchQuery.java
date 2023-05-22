@@ -66,10 +66,10 @@ public class searchQuery {
 
     //Function to search the query from the dataBase
     public static AggregateIterable<Document> searchQuery(String []param,mongoConnect mongoDB) {
-        System.out.println("religion "+ param[0]);
-        System.out.println("category "+ param[1]);// 250000
+        //System.out.println("religion "+ param[0]);
+        //System.out.println("category "+ param[1]);// 250000
         int num = Integer.parseInt(param[2]);
-        System.out.println("integer "+ num);
+        //System.out.println("integer "+ num);
 
 //        FindIterable<Document> iterable = mongoDB.MahaDBT.find(Filters.gte("Scholarships.Category.Income.Amount",800000));
 //        for (Document result : iterable){
@@ -80,25 +80,25 @@ public class searchQuery {
 
         AggregateIterable<Document> aggregateIterable = mongoDB.MahaDBT.aggregate(
                 List.of(
-                        Aggregates.unwind("$Scholarships"),
-                        Aggregates.unwind("$Scholarships.Category"),
+                        //Aggregates.unwind("$Scholarships"),
+                        Aggregates.unwind("$Category"),
                         Aggregates.match(Filters.and(
-                                Filters.in("Scholarships.Category.Name",param[1] )//param[1] "General"
+                                Filters.in("Category.Name",param[1] )//param[1] "General"
                         )),
-                        Aggregates.unwind("$Scholarships.Category.Income"),
+                        Aggregates.unwind("$Category.Income"),
                         Aggregates.match(
-                                Filters.gte("Scholarships.Category.Income.Amount",num)//Integer.parseInt(param[2]) 800000
+                                Filters.gte("Category.Income.Amount",num)//Integer.parseInt(param[2]) 800000
                         ),
-                        Aggregates.unwind("$Scholarships.Category.Income.Religion"),
+                        Aggregates.unwind("$Category.Income.Religion"),
                         Aggregates.match(
-                                Filters.in("Scholarships.Category.Income.Religion.Name", param[0])//param[0] "Hindu"
+                                Filters.in("Category.Income.Religion.Name", param[0])//param[0] "Hindu"
                         ),
                         //Aggregates.u("$Scholarships.Category.Income.Religion.Scheme",updatedoc),
                         Aggregates.project(Projections.fields(
-                                Projections.include("Scholarships.Name",
-                                        "Scholarships.ApplyLink",
-                                        "Scholarships.Category.Income.Religion.Schemes"))),
-                        Aggregates.unwind("$Scholarships.Category.Income.Religion.Schemes")
+                                Projections.include("Name",
+                                        "ApplyLink",
+                                        "Category.Income.Religion.Schemes"))),
+                        Aggregates.unwind("$Category.Income.Religion.Schemes")
 
 //                        Aggregates.project(
 //                                computed("scholarshipName","$Scholarships.Name")
@@ -119,22 +119,22 @@ public class searchQuery {
         AggregateIterable<Document> aggregateIterable = searchQuery(getQuery(),mogoDB);
         System.out.println("Search operation carride out");
         for (Document document : aggregateIterable) {
-            String scholarshipName = document.get("Scholarships",Document.class).getString("Name");
+            String scholarshipName = document.getString("Name");
 
-            String applyLink = document.get("Scholarships",Document.class).getString("ApplyLink");
-            String department = document.get("Scholarships",Document.class)
+            String applyLink = document.getString("ApplyLink");
+            String department = document
                     .get("Category", Document.class)
                     .get("Income", Document.class)
                     .get("Religion", Document.class)
                     .get("Schemes", Document.class)
                     .getString("Department");
-            String link = document.get("Scholarships",Document.class)
+            String link = document
                     .get("Category", Document.class)
                     .get("Income", Document.class)
                     .get("Religion", Document.class)
                     .get("Schemes", Document.class)
                     .getString("Eligibility");
-            int ApplicationFees = document.get("Scholarships",Document.class)
+            int ApplicationFees = document //.get("Scholarships",Document.class)
                     .get("Category", Document.class)
                     .get("Income", Document.class)
                     .get("Religion", Document.class)

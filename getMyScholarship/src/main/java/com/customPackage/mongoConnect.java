@@ -16,7 +16,9 @@ public class mongoConnect {
         URI = "mongodb://127.0.0.1:27017";
         MongoClient mongoClient = MongoClients.create(URI);
         scholarship = mongoClient.getDatabase("scholarshipDB");
+        //MahaDBT = scholarship.getCollection("MahaDBT");
         MahaDBT = scholarship.getCollection("MahaDBT");
+
         //System.out.println("Connection Established");
     }
 }

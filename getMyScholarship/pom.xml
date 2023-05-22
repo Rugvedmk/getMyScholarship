@@ -15,6 +15,7 @@
             <artifactId>mongo-java-driver</artifactId>
             <version>3.12.13</version>
         </dependency>
+
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>

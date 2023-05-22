@@ -1,121 +1,366 @@
-{
-    "Collection": "MahaDBT",
-    "Scholarships": [
-        {
-            "Name": "Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme",
-            "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
-            "Category": [
-                {
-                    "Name": ["General"],
-                    "Income": [
-                        {
-                            "Amount": 800000,
-                            "Religion": [
-                                {
-                                    "Name": [
-                                        "Hindu",
-                                        "Buddhist",
-                                        "Muslim",
-                                        "Jain",
-                                        "Christan",
-                                        "Parsi",
-                                        "Sikh",
-                                        "Jews"
-                                    ],
-                                    "Schemes": [
-                                        {
-                                            "Department": "Directorate of Art",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=44&str=F082036ACD839E20B561E911157FE22B816629ED92B0AE0A",
-                                            "ApplicationFees": 0
-                                        },
-                                        {
-                                            "Department": "Directorate of Higher Education",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=12&str=F082036ACD839E201617B2A685116CB28B74131062B4F79A",
-                                            "ApplicationFees": 0
-                                        },
-                                        {
-                                            "Department": "Directorate of Medical Education and Research",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=33&str=F082036ACD839E20B7A3575C6D8381485355E0901EEB1CE8",
-                                            "ApplicationFees": 0
-                                        },
-                                        {
-                                            "Department": "Directorate of Technical Education",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=24&str=F082036ACD839E20BE5CC57626625F60461AF768E1787E9F",
-                                            "ApplicationFees": 0
-                                        },
-                                        {
-                                            "Department": "Mahatma Phule Krishi Vidyapeeth",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=48&str=F082036ACD839E20503BADBEA9EA0F9BFEE112CE65348954",
-                                            "ApplicationFees": 0
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Name": ["SC"],
-                    "Income": [
-                        {
-                            "Amount": 800000,
-                            "Religion": [
-                                {
-                                    "Name": [
-                                        "Hindu",
-                                        "Buddhist",
-                                        "Muslim",
-                                        "Jain",
-                                        "Christan",
-                                        "Parsi",
-                                        "Sikh",
-                                        "Jews"
-                                    ],
-                                    "Schemes": [
-                                        {
-                                            "Department": "Social Justice and Special Assistance Department",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=4&str=F082036ACD839E206B2D3EA9141004DD28E46F9BDE4EB774",
-                                            "ApplicationFees": 0
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "Name": [
-                        "VJNT",
-                        "SBC"
-                    ],
-                    "Income": [
-                        {
-                            "Amount": 800000,
-                            "Religion": [
-                                {
-                                    "Name": [
-                                        "Hindu",
-                                        "Buddhist",
-                                        "Muslim",
-                                        "Jain",
-                                        "Christan",
-                                        "Parsi",
-                                        "Sikh",
-                                        "Jews"
-                                    ],
-                                    "Schemes": [
-                                        {
-                                            "Department": "OBC, SEBC, VJNT & SBC Welfare Department",
-                                            "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=32&str=F082036ACD839E20F10032F6C69C455B87FA0A11AD3E69DE",
-                                            "ApplicationFees": 0
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "Name": "Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme",
+        "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
+        "Category": [
+            {
+                "Name": [
+                    "General"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "Directorate of Art",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=44&str=F082036ACD839E20B561E911157FE22B816629ED92B0AE0A",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "MAFSU Nagpur",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=48&str=F082036ACD839E20503BADBEA9EA0F9BFEE112CE65348954",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Directorate of Higher Education",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=12&str=F082036ACD839E201617B2A685116CB28B74131062B4F79A",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Directorate of Medical Education and Research",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=33&str=F082036ACD839E20B7A3575C6D8381485355E0901EEB1CE8",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Directorate of Technical Education",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=24&str=F082036ACD839E20BE5CC57626625F60461AF768E1787E9F",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Mahatma Phule Krishi Vidyapeeth",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=48&str=F082036ACD839E20503BADBEA9EA0F9BFEE112CE65348954",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": [
+                    "SC"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "Social Justice and Special Assistance Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=4&str=F082036ACD839E206B2D3EA9141004DD28E46F9BDE4EB774",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": [
+                    "VJNT",
+                    "SBC"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "OBC, SEBC, VJNT & SBC Welfare Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=32&str=F082036ACD839E20F10032F6C69C455B87FA0A11AD3E69DE",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Dr. Panjabrao Deshmukh Vasatigruh Nirvah Bhatta Yojna (DOA)",
+        "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
+        "Category": [
+            {
+                "Name": [
+                    "General"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "Directorate of Art",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=45&str=F082036ACD839E209BEEBA4219680A790515CD0670A37527",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Directorate of Higher Education",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=43&str=F082036ACD839E207E3AAFB9C2C947D10999F20C06E9D6F5",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "MAFSU Nagpur",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=49&str=F082036ACD839E20E1480191704DC705005B92BAB934A241",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Directorate of Medical Education and Research",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=34&str=F082036ACD839E203D3730FE302A276C45BA6C118CB5AB08",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Directorate of Technical Education",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=25&str=F082036ACD839E208CA664B9415FA74A89A47B88C3ED5BB2",
+                                        "ApplicationFees": 0
+                                    },
+                                    {
+                                        "Department": "Mahatma Phule Krishi Vidyapeeth",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=47&str=F082036ACD839E205FE5B80D69C2BB6340AE88B6648A4E9D",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Tuition Fees and Examination Fees to SBC Students",
+        "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
+        "Category": [
+            {
+                "Name": [
+                    "OBC",
+                    "VJNT",
+                    "SBC"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "OBC, SEBC, VJNT & SBC Welfare Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=38&str=F082036ACD839E20E430DE10D38F7AA9B78F58324F36886F",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": [
+                    "ST"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "Tribal Development Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=7&str=F082036ACD839E2054951C4437C84EBCB3091FD19B58673B",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Government of India Post-Matric Scholarship",
+        "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
+        "Category": [
+            {
+                "Name": [
+                    "sc"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "Social justice and Special Assistance Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=1&str=F082036ACD839E20ADB22D0E84E0625B5D33A9ABE1F7F82D",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "Vocational Training Fee reimbursement for the OBC, SEBC, VJNT & SBC Welfare Department students",
+        "ApplyLink": "https://mahadbt.maharashtra.gov.in/Login/Login?Length=5",
+        "Category": [
+            {
+                "Name": [
+                    "OBC",
+                    "VJNT",
+                    "SBC"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "OBC, SEBC, VJNT & SBC Welfare Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=86&str=F082036ACD839E204AACE95C7DD6D43AC0C7583F6BB94BC5",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": [
+                    "ST"
+                ],
+                "Income": [
+                    {
+                        "Amount": 800000,
+                        "Religion": [
+                            {
+                                "Name": [
+                                    "Hindu",
+                                    "Buddhist",
+                                    "Muslim",
+                                    "Jain",
+                                    "Christan",
+                                    "Parsi",
+                                    "Sikh",
+                                    "Jews"
+                                ],
+                                "Schemes": [
+                                    {
+                                        "Department": "Tribal Development Department",
+                                        "Eligibility": "https://mahadbt.maharashtra.gov.in/FindEligibleSchemes/SchemeData?SchemeId=82&str=F082036ACD839E20E4A6A86A6F98AE326E4DA2F7E81D1614",
+                                        "ApplicationFees": 0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
