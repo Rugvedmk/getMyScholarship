@@ -114,6 +114,68 @@ public class searchQuery {
 
     }
 
+    public static String[] printResultWeb(mongoConnect mogoDB, String []webparam)
+    {
+        AggregateIterable<Document> aggregateIterable = searchQuery(webparam,mogoDB);
+        System.out.println("Search operation carride out");
+       // String []outputResults;
+        String []element = null;
+        for (Document document : aggregateIterable) {
+            String scholarshipName = document.getString("Name");
+
+            String applyLink = document.getString("ApplyLink");
+            String department = document
+                    .get("Category", Document.class)
+                    .get("Income", Document.class)
+                    .get("Religion", Document.class)
+                    .get("Schemes", Document.class)
+                    .getString("Department");
+            String link = document
+                    .get("Category", Document.class)
+                    .get("Income", Document.class)
+                    .get("Religion", Document.class)
+                    .get("Schemes", Document.class)
+                    .getString("Eligibility");
+            int ApplicationFees = document //.get("Scholarships",Document.class)
+                    .get("Category", Document.class)
+                    .get("Income", Document.class)
+                    .get("Religion", Document.class)
+                    .get("Schemes", Document.class)
+                    .getInteger("ApplicationFees");
+            //             Document result = document.get("Scholarships",Document.class)
+//                    .get("Category", Document.class)
+//                    .get("Income", Document.class)
+//                    .get("Religion", Document.class);
+//                    //.get("Schemes", Document.class);
+
+
+            //Arrays sresult = (Arrays) result;
+            //String scholarshipName = result.getString("ScholarshipsName");
+            System.out.println("Scholarship Name : "+ scholarshipName);
+            System.out.println("Apply Link : "+ applyLink);
+            System.out.println("Department Name : "+ department);
+            System.out.println("Eligibility link : "+ link);
+            System.out.println("Application Fees : "+ ApplicationFees);
+            System.out.println(" ");
+
+
+          //  outputResults = new String[]{scholarshipName, applyLink, department, link};
+            element = new String[]{scholarshipName, applyLink, department, link};
+
+//            for (Document scheme : sresult){
+//                    String department = scheme.getString("Department");
+//                    String link = scheme.getString("Eligibility");
+//                    int ApplicationFees = scheme.getInteger("ApplicationFees");
+//                System.out.println("Department " + department);
+//                System.out.println("Eligibility " + link);
+//                System.out.println("ApplicationFees" + ApplicationFees);
+//            }
+
+            //System.out.println(document.toJson());
+        }
+        return element;
+    }
+
     public static void printResult(mongoConnect mogoDB)
     {
         AggregateIterable<Document> aggregateIterable = searchQuery(getQuery(),mogoDB);
@@ -167,6 +229,8 @@ public class searchQuery {
             //System.out.println(document.toJson());
         }
     }
+
+
 
 
 }

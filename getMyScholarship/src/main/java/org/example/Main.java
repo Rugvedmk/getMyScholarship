@@ -5,9 +5,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
 import org.bson.Document;
 
-import static com.customPackage.searchQuery.printResult;
-
-import static com.customPackage.searchQuery.searchQuery;
+import static com.customPackage.searchQuery.*;
 import static com.customPackage.update.addDoc.addScheme;
 import static com.customPackage.update.dltDoc.dltScheme;
 import  static  com.customPackage.update.setDoc.setScheme;
