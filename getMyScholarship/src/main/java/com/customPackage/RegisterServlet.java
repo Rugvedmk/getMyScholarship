@@ -29,7 +29,7 @@ public class RegisterServlet extends HttpServlet {
         String []choiceTemplate = {religion,category,amount};
 
        // String result = Arrays.toString(printResultWeb(mongoDB, choiceTemplate));
-        String []arrResult = printResultWeb(mongoDB, choiceTemplate);
+        String [][]arrResult = printResultWeb(mongoDB, choiceTemplate);
 
 
         if(amount != "800000") {
@@ -42,10 +42,12 @@ public class RegisterServlet extends HttpServlet {
             out.println("<h2 class=\"result-item\">Religion Selected: <span>" + religion + "</span></h2>");
             out.println("<h2 class=\"result-item\">Amount Selected: <span>" + amount + "</span></h2>");
            // out.println("<h1 class=\"result-item\">RESULT: <span>" + result + "</span></h1>");
-            out.println("<h1 class=\"result-item\">Scholarship: <span>" + arrResult[0] + "</span></h1>");
-            out.println("<h1 class=\"result-item\">Apply Link: <a href=\"" + arrResult[1] + "\">" + arrResult[1] + "</a></h1>");
-            out.println("<h1 class=\"result-item\">Department: <span>" + arrResult[2] + "</span></h1>");
-            out.println("<h1 class=\"result-item\">Link: <a href=\"" + arrResult[3] + "\">" + arrResult[3] + "</a></h1>");
+            for(int i = 1;i<=Integer.parseInt(arrResult[0][0]);i++){
+                out.println("<h1 class=\"result-item\">Scholarship: <span>" + arrResult[i][0] + "</span></h1>");
+                out.println("<h1 class=\"result-item\">Apply Link: <a href=\"" + arrResult[i][1] + "\">" + arrResult[i][1] + "</a></h1>");
+                out.println("<h1 class=\"result-item\">Department: <span>" + arrResult[i][2] + "</span></h1>");
+                out.println("<h1 class=\"result-item\">Link: <a href=\"" + arrResult[i][3] + "\">" + arrResult[i][3] + "</a></h1>");
+            }
 
             out.println("</div>");
 
