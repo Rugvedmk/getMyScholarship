@@ -1,5 +1,5 @@
 package org.example;
-
+import com.customPackage.mongoConnectAtlas;
 import com.customPackage.mongoConnect;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
@@ -14,10 +14,11 @@ import java.util.Scanner;
 
 public class Main {
 
-    static mongoConnect mongoDB = new mongoConnect();
+    static mongoConnectAtlas mongoDB = new mongoConnectAtlas();
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+       // mongoConnectAtlas connector = new mongoConnectAtlas();
         FindIterable<Document> tempiterate = mongoDB.MahaDBT.find(Filters.eq("Collection","MahaDBT"));
         for (Document result : tempiterate) {
             System.out.println(result.toJson());

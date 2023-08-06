@@ -1,6 +1,7 @@
 package com.customPackage.update;
 
 import com.customPackage.mongoConnect;
+import com.customPackage.mongoConnectAtlas;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.result.UpdateResult;
 import org.bson.Document;
@@ -18,7 +19,7 @@ import java.util.List;
 public class setDoc {
     //static mongoConnect mongoDB = new mongoConnect();
     static Scanner sc = new Scanner(System.in);
-    public static void setScheme(int test,mongoConnect mongoDB){
+    public static void setScheme(int test, mongoConnectAtlas mongoDB){
         String scholarshipName,Category,Religion,DepartmentName,EligibilityLink;
         int ApplicationFees,Amount;
         String pause = new String();

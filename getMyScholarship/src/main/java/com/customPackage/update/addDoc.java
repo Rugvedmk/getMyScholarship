@@ -1,6 +1,7 @@
 package com.customPackage.update;
 
 import com.customPackage.mongoConnect;
+import com.customPackage.mongoConnectAtlas;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.result.UpdateResult;
 import org.bson.Document;
@@ -37,7 +38,7 @@ public class addDoc {
          */
     }
 
-    public static void addScheme(int test,mongoConnect mongoDB){
+    public static void addScheme(int test,mongoConnectAtlas mongoDB){
         String scholarshipName,Category,Religion,DepartmentName,EligibilityLink;
         int ApplicationFees,Amount;
         String pause;
@@ -111,6 +112,48 @@ public class addDoc {
 
 
     }
+
+    public  static void addSchemeWeb(mongoConnectAtlas mongoDB, String []param) {
+        String scholarshipName, Category, Religion, DepartmentName, EligibilityLink;
+        int ApplicationFees, Amount;
+        String pause;
+        Scanner sc = new Scanner(System.in);
+        scholarshipName = param[0];//"Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme";
+        //String []param = getQuery();
+        Category = param[1];//"SC";//param[1];
+        Religion = param[2];//"Hindu";//param[0];
+        Amount = Integer.parseInt(param[3]);//800000;//Integer.parseInt(param[2]);
+
+        DepartmentName = param[4];
+        EligibilityLink = param[5];
+        ApplicationFees = Integer.parseInt(param[6]);
+
+        Document addDoc = new Document("Department",DepartmentName)
+                .append("Eligibility",EligibilityLink)
+                .append("ApplicationFees",ApplicationFees);
+
+        Bson query = Filters.and(
+                Filters.eq("Name",scholarshipName)//"Rajarshi Chhatrapati Shahu Maharaj Scholarship scheme"
+        );
+
+        Bson update = Updates.push("Category.$[catObj].Income.$[incObj].Religion.$[relObj].Schemes", addDoc);
+
+
+        UpdateOptions options = new UpdateOptions().arrayFilters(
+                List.of(
+                        //Filters.eq("schObj.Name",scholarshipName),
+                        Filters.gte("incObj.Amount",Amount),
+                        Filters.in("relObj.Name",Religion),
+                        Filters.in("catObj.Name",Category)
+                )
+        );
+
+        UpdateResult updateResult = mongoDB.MahaDBT.updateOne(query,update, options);
+        System.out.println(updateResult + "\n");
+
+
+    }
+
 }
 
 

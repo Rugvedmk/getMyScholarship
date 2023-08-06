@@ -13,9 +13,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class insertQuery {
-    static mongoConnect mongoDB  = new mongoConnect();
+    static mongoConnectAtlas mongoDB  = new mongoConnectAtlas();
     public static void insert() {
-        String connectionString = "mongodb://localhost:27017";
+       // String connectionString = "mongodb://localhost:27017";
+        String connectionString = "mongodb+srv://ompatil07:TaLCKLU60aQCnkNk@scholarshipcluster.6fwqmwr.mongodb.net/?retryWrites=true&w=majority";
         String databaseName = "scholarshipDB";
         String collectionName = "MahaDBT";
         //Getting the data in from json file to jsonObject

@@ -61,7 +61,7 @@ public class searchQuery {
     }
 
     //Function to search the query from the dataBase
-    public static AggregateIterable<Document> searchQuery(String []param,mongoConnect mongoDB) {
+    public static AggregateIterable<Document> searchQuery(String []param,mongoConnectAtlas mongoDB) {
         //System.out.println("religion "+ param[0]);
         //System.out.println("category "+ param[1]);// 250000
         int num = Integer.parseInt(param[2]);
@@ -106,15 +106,15 @@ public class searchQuery {
 //        AggregateIterable<Document> aggregateIterable = mongoDB.MahaDBT.aggregate(
 //                List.of(
 //                        Aggregates.unwind("$Scholarships")));
-                return aggregateIterable;
+        return aggregateIterable;
 
     }
 
-    public static String[][] printResultWeb(mongoConnect mogoDB, String []webparam)
+    public static String[][] printResultWeb(mongoConnectAtlas mogoDB, String []webparam)
     {
         AggregateIterable<Document> aggregateIterable = searchQuery(webparam,mogoDB);
         System.out.println("Search operation carride out");
-       // String []outputResults;
+        // String []outputResults;
         String [][]result = new String[100][5];
         int count = 0;
 
@@ -184,7 +184,7 @@ public class searchQuery {
         return result;
     }
 
-    public static void printResult(mongoConnect mogoDB)
+    public static void printResult(mongoConnectAtlas mogoDB)
     {
         AggregateIterable<Document> aggregateIterable = searchQuery(getQuery(),mogoDB);
         System.out.println("Search operation carride out");

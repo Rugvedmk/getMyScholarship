@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>getMyScholarship</artifactId>
+    <artifactId>flight</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -20,6 +20,16 @@
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>4.3.3</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
